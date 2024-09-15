@@ -9,5 +9,5 @@ import playformCompress from "@playform/compress";
 export default defineConfig({
   integrations: [tailwind(), react(), playformCompress()],
   output: "hybrid",
-  adapter: vercel()
+  adapter: vercel(),
 });

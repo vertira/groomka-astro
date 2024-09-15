@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import Motion from './Motion.tsx'
 import { CarouselDogs } from './CarouselDogs';
 import LazyLottie from './LazyLottie';
@@ -19,6 +18,6 @@ import LazyLottie from './LazyLottie';
           <p class="text-slate-900 max-md:text-center font-bold">Galeria Naszych Szczęśliwych Pupili: Zobacz Efekty Profesjonalnego Groomingu</p>
         </div>
       </Motion>
-      <CarouselDogs client:idle/>
+      <CarouselDogs client:visible/>
       <LazyLottie src="/lottie/swipe.lottie" styles="h-40 -mt-32 z-10" client:idle/>
     </section>
