@@ -1,0 +1,46 @@
+---
+import Lottie from "./Lottie";
+import { Image } from 'astro:assets';
+import Motion from './Motion.tsx'
+import LazyLottie from "./LazyLottie";
+---
+
+		<section
+			class="flex flex-col-reverse max-w-full min-h-screen mx-10 justify-center  lg:mx-30 lg:flex-row items-center lg:justify-center"
+			id="about"
+		>
+			<div class="flex relative flex-col mb-20 h-96 max-w-72 lg:max-w-screen  lg:mb-0">
+				<LazyLottie src="/lottie/love.lottie" styles="max-w-screen sm:max-w-96 h-full" client:idle/>
+				<Image
+					src="/images/dog.webp"
+					alt="grooming dog"
+					width={384}
+					height={288}
+					class="absolute top-3/4 -translate-y-10 xl:static aspect-[0.86]"
+				/>
+			</div>
+			<Motion
+				className="flex flex-col mt-20 lg:mt-0 lg:w-5/12 overflow-hidden transition duration-[1500ms] ease-in-out"
+				client:visible
+				skewY={30}
+				duration={0}
+			>
+				<div class="flex gap-5 py-1.5 text-pink-600 uppercase tracking-[6px]">
+					<div class="shrink-0 my-auto h-0.5 bg-pink-600 w-[72px]" />
+					<h2 class="flex-auto font-accent lg:text-xl font-bold">
+						GROOMING TO NASZA PASJA
+					</h2>
+				</div>
+				<h3 class="mt-3 text-5xl text-center font-accent">
+					Luksusowa pielęgnacja z miłością!
+				</h3>
+				<p class="mt-7 leading-8 font-accent text-justify">
+					Cześć wszystkim!<br/> Mam na imię Klaudia i od zawsze jestem miłośniczką
+					zwierząt. Z ogromną przyjemnością będę dbać o Wasze ukochane
+					zwierzaki, zapewniając im profesjonalny i spokojny zabieg groomingowy.
+					W mojej pracy podkreślam bezpieczeństwo i komfort zwierząt, dlatego
+					zawsze stosuję metody bezstresowe i odpowiednie dla każdego
+					indywidualnego pupila.
+				</p>
+			</Motion>
+		</section>

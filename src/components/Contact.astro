@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+---
+	
+		<div class="flex flex-col justify-center min-h-screen lg:mx-30 lg:flex-row-reverse lg:items-center lg:justify-center font-accent">
+			<section
+				class="flex flex-col justify-center px-5 mt-9 mb-3"
+				id="contact"
+			>
+				<div class="flex gap-3.5 self-center py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
+					<div class="shrink-0 self-start mt-1.5 h-0.5 bg-pink-600 w-[42px]" />
+					<p class="font-bold  text-sm lg:text-xl">Znajdziesz NAS TUTAJ</p>
+				</div>
+				<div class="mt-7 text-6xl font-bold text-center text-black">
+					<p>
+						Złota 23,
+						<br /> 62-800,
+						<br /> Kalisz
+						<br />
+						Polska
+					</p>
+					<div class="flex my-2"><Image
+						src="/images/phone.svg"
+						alt="phone icon"
+						class="shrink-0 w-12 aspect-[1.09] mx-5"
+						width={48}
+						height={48}
+					/> 721-697-772</div>
+				</div>
+				<div class="flex flex-col justify-center px-1 mt-7">
+					<div class="flex gap-5 justify-end">
+						<div class="flex gap-2">
+							<a href="https://www.instagram.com/groomkakalisz" aria-label="Instagram link">
+								<Image
+									src="/images/instagram.svg"
+									alt="instagram logo"
+									class="shrink-0 w-12 aspect-[1.09] mx-5"
+									width={48}
+									height={48}
+								/>
+							</a>
+							<a href="https://www.facebook.com/groomkakalisz" aria-label="Facebook link">
+								<Image
+									src="/images/facebook.svg"
+									alt="instagram logo"
+									class="shrink-0 w-12 aspect-[1.09] mx-5"
+									width={48}
+									height={48}
+								/>
+							</a>
+						</div>
+						<div class="flex-auto my-auto text-2xl font-bold text-center text-black">
+							groomkakalisz
+						</div>
+					</div>
+				</div>
+			</section>
+			<Image
+			width={300}
+			height={300}
+				src="/images/maps.webp"
+				alt=""
+				class="hidden lg:flex w-6/12 rounded-md"
+			/>
+		</div>

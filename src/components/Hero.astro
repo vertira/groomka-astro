@@ -1,0 +1,43 @@
+---
+import LazyLottie from "./LazyLottie";
+import Lottie from "./Lottie"
+import { Image } from 'astro:assets';
+---
+
+		<section class="flex flex-col items-center w-full mt-10 font-accent mb-20 xl:mt-24">
+			<div class="hidden xl:flex fixed -left-20 top-1/2 rotate-90">
+				<p class="font-bold text-pink-600  uppercase tracking-[6px] text-2xl font-accent">
+					OBSERWUJ NAS
+				</p>
+				<a href="https://www.instagram.com/groomkakalisz" aria-label="Instagram link">
+					<Image
+						src="/images/instagram.svg"
+						alt="instagram logo"
+						class="shrink-0 w-12 aspect-[1.09] mx-5"
+						width={48}
+						height={48}
+					/>
+				</a>
+				<a href="https://www.facebook.com/groomkakalisz" aria-label="Facebook link">
+					<Image
+						src="/images/facebook.svg"
+						alt="instagram logo"
+						class="shrink-0 w-12 aspect-[1.09] mx-5"
+						width={48}
+						height={48}
+					/>
+				</a>
+			</div>
+			<div class="overflow-hidden lg:overflow-visible">
+				<h1 class="flex justify-center font-bold text-lg text-pink-600 uppercase tracking-[6px]">
+					Zadbaj o Swojego Pupila
+				</h1>
+				<h2 class="w-full text-center text-6xl text-gray-900 capitalize animate-jump-in animate-duration-1000">
+					Profesjonalna Pielęgnacja Psów
+				</h2>
+			</div>
+			<div class="max-w-screen h-96">
+			<Lottie src="/lottie/Dog.lottie" styles="max-w-screen sm:max-w-96 h-full" client:load/>
+			</div
+		</section>
+

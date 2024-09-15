@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import Motion from './Motion.tsx'
+import LazyLottie from './LazyLottie';
+---
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('toggle-container');
+    if (!container) return;
+
+    const img = document.querySelector('.toggle-image') as HTMLImageElement | null;
+    const title = document.querySelector('.toggle-title') as HTMLElement | null;
+    if (!img || !title) return;
+
+    container.addEventListener('click', () => {
+      const src = img.getAttribute('src') === '/images/tina1.webp' ? '/images/tina2.webp' : '/images/tina1.webp';
+      const titleText = title.innerText === 'Przed' ? 'Po' : 'Przed';
+      img?.classList.add('animate-fade-up')
+      setTimeout(()=> img?.classList.remove('animate-fade-up'),500)
+
+      img.setAttribute('src', src);
+      title.innerText = titleText;
+    });
+  });
+</script>
+
+    <section class="flex flex-col-reverse max-w-full mx-10 pt-36 min-h-screen lg:mt-0 lg:mx-30 lg:flex-row-reverse lg:items-center justify-center lg:min-h-screen sm:items-center" id="animals">
+      <div class="flex flex-col cursor-pointer mt-24 max-w-screen relative overflow-visible" id="toggle-container">
+        <div class="absolute w-fit top-0 left-1/2">
+          <LazyLottie src="/lottie/click.lottie" styles="absolute -translate-x-1/2 -translate-y-1/2 w-40 h-40 z-[1]" client:idle/>
+          <p class="toggle-title absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 font-headings text-slate-100 text-4xl select-none z-[2]">Po</p>
+        </div>
+        <div class="absolute w-full h-full overflow-hidden">
+          <LazyLottie src="/lottie/click2.lottie" styles="absolute w-[550px] lg:w-[500px] lg:translate-x-[20%] translate-y-[75%] lg:translate-y-[130%] " client:idle/>
+        </div>
+        <Image
+          src="/images/tina2.webp"
+          alt="grooming dog"
+          width={384}
+          height={288}
+          class="toggle-image rounded-md aspect-[0.75] select-none"
+        />
+      </div>
+      <Motion className="flex flex-col lg:mt-0 lg:w-5/12 lg:mx-10 transition duration-[1500ms] ease-in-out" client:visible scale={0} duration={0}>
+        <div class="flex gap-5 py-1.5 text-pink-600 uppercase tracking-[6px]">
+          <div class="shrink-0 my-auto h-0.5 bg-pink-600  w-[72px]" />
+          <h2 class="font-accent text-sm lg:text-xl font-bold">
+            ODŚWIEŻENIE, KTÓRE SPRAWIA RADOŚĆ
+          </h2>
+        </div>
+        <h3 class="mt-3 text-5xl text-center font-accent">
+          Nowa Fryzura, Szczęśliwy Piesek
+        </h3>
+        <p class="mt-7 leading-8 font-accent text-justify	">
+          Każdy właściciel psa wie, jak ważna jest odpowiednia pielęgnacja
+          czworonożnego przyjaciela. Nic tak nie poprawia nastroju pupila, jak
+          profesjonalnie wykonana, odświeżona fryzura. Nasze usługi groomingu
+          gwarantują nie tylko estetyczny wygląd, ale również zdrowie i komfort
+          Twojego psa. Zaufaj naszym ekspertom i zobacz, jak zadowolony i pełen
+          energii może być Twój piesek po wizycie u nas!
+        </p>
+      </Motion>
+    </section>
