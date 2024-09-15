@@ -3,13 +3,14 @@ import Lottie from "./Lottie";
 import { Image } from 'astro:assets';
 import Motion from './Motion.tsx'
 import LazyLottie from "./LazyLottie";
+import { SalonImages } from "./SalonImages";
 ---
 
 		<section
 			class="flex flex-col-reverse max-w-full min-h-screen mx-10 justify-center  lg:mx-30 lg:flex-row items-center lg:justify-center"
 			id="about"
 		>
-			<div class="flex relative flex-col mb-20 h-96 max-w-72 lg:max-w-screen  lg:mb-0">
+			<div class="flex relative flex-col mb-40 lg:mb-10 h-96 max-w-72 lg:max-w-screen ">
 				<LazyLottie src="/lottie/love.lottie" styles="max-w-screen sm:max-w-96 h-full" client:idle/>
 				<Image
 					src="/images/dog.webp"
@@ -43,4 +44,29 @@ import LazyLottie from "./LazyLottie";
 					indywidualnego pupila.
 				</p>
 			</Motion>
+		</section>
+		<section
+			class="flex flex-col max-w-full min-h-screen mx-10 justify-center  lg:mx-30 lg:flex-row items-center lg:justify-center"
+			id="about"
+		>
+			<Motion
+				className="flex flex-col mt-20 lg:mt-0 lg:w-5/12 overflow-hidden transition duration-[1500ms] ease-in-out lg:pr-4"
+				client:visible
+				skewY={30}
+				duration={0}
+			>
+				<div class="flex gap-5 py-1.5 text-pink-600 uppercase tracking-[6px]">
+					<div class="shrink-0 my-auto h-0.5 bg-pink-600 w-[72px]" />
+					<h2 class="flex-auto font-accent lg:text-xl font-bold">
+						NASZ SALON GROOMING
+					</h2>
+				</div>
+				<h3 class="mt-3 text-5xl text-center font-accent">
+					Miejsce Czystości i Profesjonalnej Pielęgnacji
+				</h3>
+				<p class="mt-7 leading-8 font-accent text-justify">
+					To miejsce, w którym z pasją i troską zajmuję się Waszymi pupilami. Każde strzyżenie i pielęgnacja odbywa się z pełnym zaangażowaniem, aby zapewnić Waszym zwierzakom komfort i piękny wygląd. Chcę, abyście powierzali mi swoje ukochane zwierzaki z pełnym spokojem i zaufaniem, wiedząc, że są w najlepszych rękach. <br/>Zapraszam do zapisów i do zobaczenia w salonie!
+				</p>
+			</Motion>
+			<SalonImages client:idle/>
 		</section>
