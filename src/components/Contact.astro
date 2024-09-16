@@ -7,10 +7,11 @@ import { Image } from 'astro:assets';
 				class="flex flex-col justify-center px-5 mt-9 mb-3"
 				id="contact"
 			>
-				<div class="flex gap-3.5 self-start py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
-					<div class="shrink-0 self-start mt-1.5 h-0.5 bg-pink-600 w-[42px]" />
-					<p class="font-bold  text-sm lg:text-xl">Znajdziesz NAS TUTAJ</p>
-				</div>
+			<div class="flex gap-3.5 w-full self-center items-center py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
+				<div class="shrink-0  h-0.5 bg-pink-600 flex-1" />
+				<p class="font-bold  text-sm lg:text-xl">Jesteśmy tutaj !</p>
+				<div class="shrink-0  h-0.5 bg-pink-600 flex-1" />
+			</div>
 				<div class="my-7 text-4xl font-bold text-center text-black">
 					<p>
 						Złota 23,
@@ -20,24 +21,24 @@ import { Image } from 'astro:assets';
 						Polska
 					</p>
 				</div>
-				<div class="flex gap-3.5 self-start py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
-					<div class="shrink-0 self-start mt-1.5 h-0.5 bg-pink-600 w-[42px]" />
-					<p class="font-bold  text-sm lg:text-xl">GODZINY OTWARCIA</p>
+				<div class="flex gap-3.5 w-full self-center items-center py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
+					<div class="shrink-0  h-0.5 bg-pink-600 flex-1" />
+					<p class="font-bold  text-sm lg:text-xl">Telefon</p>
+					<div class="shrink-0  h-0.5 bg-pink-600 flex-1" />
 				</div>
 				<div class="my-7 text-lg font-bold text-center text-black">
-					<p> 
-poniedziałek: 09:00–19:00<br/>
-wtorek: 09:00–19:00<br/>
-środa: 09:00–17:00<br/>
-czwartek: 09:00–19:00<br/>
-piątek: 09:00–19:00<br/>
-sobota: 09:00–14:00<br/>
-niedziela: zamknięte<br/>
-					</p>
+					<div class="flex text-2xl"><Image
+						src="/images/phone.svg"
+						alt="phone icon"
+						class="shrink-0 w-10 aspect-[1.09] mx-5"
+						width={24}
+						height={24}
+					/> 721-697-772</div>
 				</div>
-				<div class="flex gap-3.5 self-start py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
-					<div class="shrink-0 self-start mt-1.5 h-0.5 bg-pink-600 w-[42px]" />
-					<p class="font-bold  text-sm lg:text-xl">SOCIAL MEDIA</p>
+				<div class="flex gap-3.5 w-full self-center items-center py-1.5 text-lg text-pink-600 uppercase tracking-[6px]">
+					<div class="shrink-0   h-0.5 bg-pink-600 flex-1" />
+					<p class="font-bold   text-sm lg:text-xl">SOCIAL MEDIA</p>
+					<div class="shrink-0   h-0.5 bg-pink-600 flex-1" />
 				</div>
 				<div class="flex flex-col justify-center px-1 mt-7">
 					<div class="flex gap-5 justify-end">
@@ -75,11 +76,3 @@ niedziela: zamknięte<br/>
 				class="hidden lg:flex w-6/12 rounded-md"
 			/>
 		</div>
-		<!-- <div class="flex my-2 text-2xl"><Image
-			src="/images/phone.svg"
-			alt="phone icon"
-			class="shrink-0 w-10 aspect-[1.09] mx-5"
-			width={24}
-			height={24}
-		/> 721-697-772</div>
-	</div> -->

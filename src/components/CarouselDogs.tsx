@@ -35,6 +35,12 @@ const dogs = [
     url: "/images/dog5-1.jpeg",
   },
   {
+    url: "/images/lily2.jpg",
+  },
+  {
+    url: "/images/lily.jpg",
+  },
+  {
     url: "/images/dog5-2.jpeg",
   },
   {

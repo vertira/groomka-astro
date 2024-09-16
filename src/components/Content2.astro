@@ -24,21 +24,21 @@ import LazyLottie from './LazyLottie';
   });
 </script>
 
-    <section class="flex flex-col-reverse max-w-full mx-10 pt-36 min-h-screen lg:mt-0 lg:mx-30 lg:flex-row-reverse lg:items-center justify-center lg:min-h-screen sm:items-center" id="animals">
+    <section class="flex flex-col-reverse max-w-full mx-10 pt-36 lg:pt-0 min-h-screen lg:mt-0 lg:mx-30 lg:flex-row-reverse lg:items-center justify-center lg:min-h-screen sm:items-center" id="animals">
       <div class="flex flex-col cursor-pointer mt-24 max-w-screen relative overflow-visible" id="toggle-container">
         <div class="absolute w-fit top-0 left-1/2">
           <LazyLottie src="/lottie/click.lottie" styles="absolute -translate-x-1/2 -translate-y-1/2 w-40 h-40 z-[1]" client:idle/>
           <p class="toggle-title absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 font-headings text-slate-100 text-4xl select-none z-[2]">Po</p>
         </div>
         <div class="absolute w-full h-full overflow-hidden">
-          <LazyLottie src="/lottie/click2.lottie" styles="absolute w-[550px] lg:w-[500px] lg:translate-x-[20%] translate-y-[110%] translate-x-[10%] lg:translate-y-[130%] " client:idle/>
+          <LazyLottie src="/lottie/click3.lottie" styles="absolute w-80 left-28 bottom-0 lg:left-40 lg:bottom-0 " client:idle/>
         </div>
         <Image
           src="/images/tina2.webp"
           alt="grooming dog"
           width={384}
           height={288}
-          class="toggle-image rounded-md aspect-[0.75] select-none"
+          class="toggle-image rounded-md aspect-[0.75] select-none mx-auto"
         />
       </div>
       <Motion className="flex flex-col lg:mt-0 lg:w-5/12 lg:mx-10 transition duration-[1500ms] ease-in-out" client:visible scale={0} duration={0}>
