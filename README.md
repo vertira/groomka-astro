@@ -1,6 +1,6 @@
 # Groomka
 
-Groomka is a landing page built using Astro, React, TypeScript, and TailwindCSS. This project is designed to provide a modern, fast, and responsive user experience. .
+Groomka is a landing page built using Astro, React, TypeScript, and TailwindCSS. This project is designed to provide a modern, fast, and responsive user experience.
 
 [LivePreview](www.groomka.vercel.app)
 
